@@ -25,3 +25,5 @@ class RoomsController < ApplicationController
   def destroy
   end
 end
+
+

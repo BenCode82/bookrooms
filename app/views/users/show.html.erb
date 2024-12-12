@@ -8,4 +8,14 @@
 
   <h1> Vos réservations :</h1>
 
+  <% @bookings.each do |booking| %>
+    <div class="booking-card">
+      <h2 class="booking-hotel-name"><%= booking.room.hotel_name %></h2>
+      <h3 class="booking-infos"> Adresse : <%= booking.room.address %></h3>
+      
+      <p class="booking-infos">Du <%= booking.start_date %> au <%= booking.end_date %></p>
+
+    </div>
+  <% end %>
+
 </div>
