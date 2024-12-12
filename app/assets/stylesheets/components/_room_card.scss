@@ -1,0 +1,74 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 80%;
+  margin: 0 auto;
+
+  gap: 25px;
+}
+
+.card {
+  // width: 25%;
+  // // height: 300px;
+
+  // margin: 15px;
+
+  width: 100%; /* Par défaut, prend toute la largeur sur petits écrans */
+  max-width: 300px; /* Fixe une largeur maximale pour les grands écrans */
+  margin: 15px auto; 
+
+  display: flex;
+  flex-direction: column;
+
+
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+
+  img {
+    width: 120px;
+    width: 120px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+
+    // white-space: nowrap; /* Empêche le retour à la ligne */
+    // overflow: hidden; /* Cache le contenu débordant */
+    // text-overflow: ellipsis; /* Ajoute les "..." pour indiquer que le texte est tronqué */
+  }
+
+  p {
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+//   card-room-div {
+//     display: flex;
+//     flex-direction: column;
+
+//     justify-content: space-between;
+//   }
+}
+
+// .card-room-info {
+//   display: flex;
+//   flex-direction: column;
+
+//   justify-content: space-between;
+// }
