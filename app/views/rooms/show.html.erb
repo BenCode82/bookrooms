@@ -6,7 +6,10 @@
 
     <div class="head-card-room">
       <%= cl_image_tag(@room.photo.key) %>
-      <button class="booking-btn" id="openModal"style="width: 120px; height: 40px; font-size: 16px; border-radius: 5px;">Booker !</button>
+      <button
+        class="booking-btn"
+        id="openModal"
+        style="width: 120px; height: 40px; font-size: 16px; border-radius: 5px;">Booker !</button>
     </div>
 
     <p>Description : <%= @room.description %></p>
@@ -15,5 +18,21 @@
     <h4>Cette chambre est évaluée par nos clients : <%= @room.rating %>/5</h4>
 
   </div>
+
+  <!-- Fenêtre Modale -->
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+
+      <span class="close">&times;</span>
+      <h2>Réservez votre chambre</h2>
+
+      
+
+    </div>
+
+  </div>
+
+  <script src="application.js"></script>
 
 </div>
