@@ -4,13 +4,21 @@ import "controllers"
 import "@popperjs/core"
 import "bootstrap"
 
-document.getElementById("openModal").addEventListener("click", function(event) {
-    var modal = document.getElementById('myModal');
-    var closeModalButton = modal.querySelector('.close');
+document.addEventListener("turbo:load", function () {
+  const openModalButton = document.getElementById("openModal");
+  const modal = document.getElementById("myModal");
 
-    closeModalButton.addEventListener('click', function() {
-      modal.style.display = 'none';
+  if (openModalButton && modal) {
+    openModalButton.addEventListener("click", function (event) {
+      const closeModalButton = modal.querySelector(".close");
+
+      if (closeModalButton) {
+        closeModalButton.addEventListener("click", function () {
+          modal.style.display = "none";
+        });
+      }
+
+      modal.style.display = "block";
     });
-
-    modal.style.display = 'block';
-  });
+  }
+});

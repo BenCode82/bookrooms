@@ -1,6 +1,6 @@
+Booking.destroy_all
 Room.destroy_all
 User.destroy_all
-# Booking.destroy_all
 puts 'Database cleaned'
 
 puts 'Creating users...'
