@@ -1,2 +1,14 @@
-<h1>Rooms#show</h1>
-<p>Find me in app/views/rooms/show.html.erb</p>
+<div class="container">
+
+  <h1><%= @room.hotel_name %></h1>
+
+  <%= cl_image_tag(@room.photo.key) %>
+
+  <div class="card-room-info">
+    <p>Description : <%= @room.description %></p>
+    <h3>Prix : <%= @room.price %>€ par nuit</h3>
+
+    <h4>Cette chambre est évaluée par nos clients : <%= @room.rating %>/5</h4>
+  </div>
+
+</div>

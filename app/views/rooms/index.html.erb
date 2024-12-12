@@ -1,7 +1,11 @@
-<h1>Bienvenue sur HotelRooms</h1>
+<div class="container">
 
-<div class="card-container">
-  <% @rooms.each do |room| %>
-    <%= render 'rooms/room', room: room %>
-  <% end %>
+  <h1>Bienvenue sur HotelRooms</h1>
+
+  <div class="card-container row">
+    <% @rooms.each do |room| %>
+      <%= render 'rooms/room', room: room %>
+    <% end %>
+  </div>
+
 </div>
