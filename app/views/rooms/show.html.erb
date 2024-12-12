@@ -1,14 +1,19 @@
 <div class="container">
 
-  <h1><%= @room.hotel_name %></h1>
-
-  <%= cl_image_tag(@room.photo.key) %>
-
   <div class="card-room-info">
+
+    <h1><%= @room.hotel_name %></h1>
+
+    <div class="head-card-room">
+      <%= cl_image_tag(@room.photo.key) %>
+      <button class="booking-btn" id="openModal"style="width: 120px; height: 40px; font-size: 16px; border-radius: 5px;">Booker !</button>
+    </div>
+
     <p>Description : <%= @room.description %></p>
     <h3>Prix : <%= @room.price %>€ par nuit</h3>
 
     <h4>Cette chambre est évaluée par nos clients : <%= @room.rating %>/5</h4>
+
   </div>
 
 </div>
