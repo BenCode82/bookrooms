@@ -1,0 +1,19 @@
+<div class="card col-md-3">
+
+  <%= link_to room_path(room) do %>
+    <%= cl_image_tag(room.photo.key) %>
+
+    <div>
+          <div class="row">
+            <h2 class="col"><%= room.hotel_name %></h2>
+            <h3 class="col">★<%= room.rating %></h3>
+          </div>
+
+          <p><%= room.description %></p>
+          <h3><%= room.price %>€ par nuit</h3>
+
+    </div>
+
+  <% end %>
+
+</div>

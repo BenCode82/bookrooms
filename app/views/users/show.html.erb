@@ -1,0 +1,21 @@
+<div class="container profile-container">
+  <h1> Vos infos :</h1>
+
+  <div class="profile-card">
+    <h2 class="profile-name"><%= @user.first_name %> <%= @user.last_name %></h2>
+    <p class="profile-address"><%= @user.address %></p>
+  </div>
+
+  <h1> Vos réservations :</h1>
+
+  <% @bookings.each do |booking| %>
+    <div class="booking-card">
+      <h2 class="booking-hotel-name"><%= booking.room.hotel_name %></h2>
+      <h3 class="booking-infos"> Adresse : <%= booking.room.address %></h3>
+      
+      <p class="booking-infos">Du <%= booking.start_date %> au <%= booking.end_date %></p>
+
+    </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,41 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  h1 {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.profile-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+
+  margin-bottom: 60px;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-address {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
