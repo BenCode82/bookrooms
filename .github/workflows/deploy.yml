@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Build project (si nécessaire)
+        run: |
+          # Ajoute ici des commandes si tu dois compiler ton projet
+          # Par exemple : npm install && npm run build
+          wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://localhost:3000
+          mv localhost:3000/index.html docs/
+          git add docs/index.html
+          git commit -m "Ajout de index.html pour GitHub Pages"
+          git push origin main
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs # Remplace par le dossier contenant les fichiers HTML/CSS/JS
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
