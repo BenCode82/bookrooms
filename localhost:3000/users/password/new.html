@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsBookRoomsChallenge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="BW7L9b_BBBPpvkBb_gwzaHMoGp6N7q3hl5M7hcTtseXhTXxM-84q3DT9alzUGTNETcWUM6TdSZnXQ964dezC9g" />
+    
+
+    <link rel="stylesheet" href="../../assets/application-278a787ba5392ebb41d276f4fbd7f792b75484d2b9c17763eb7baa973acef819.css" data-turbo-track="reload" />
+    <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "application": "/assets/application-b3c52145e4177f0beadb48e288c36e2cbb603444b534715ebb66a4e490dff694.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-f309baafa3ae5ad6ccee3e7362118b87678d792db8e8ab466c4fa284dd3a4700.js",
+    "@hotwired/stimulus": "/assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js",
+    "bootstrap": "/assets/bootstrap.min-67c48d88a8e0be178058aacb338b084191ed6d65c8fef751c50248202cf1488a.js",
+    "@popperjs/core": "/assets/popper-15792033e209365e7b75c100dae2b69cba31b26b18b289383d22eb67639aad75.js",
+    "stimulus": "/assets/stimulus-1bd52683afde5c8ff5572f5d49429cea5bf7744ca636fcb830c015d8cccf353e.js",
+    "stimulus-loading": "/assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js",
+    "controllers/application": "/assets/controllers/application-368d98631bccbf2349e0d4f8269afb3fe9625118341966de054759d96ea86c7e.js",
+    "controllers/booking_modal_controller": "/assets/controllers/booking_modal_controller-c9c5e3cee51f8730827167e4afc213d68e6718285b74efada0ef43b5fd4d2529.js",
+    "controllers/hello_controller": "/assets/controllers/hello_controller-549135e8e7c683a538c3d6d517339ba470fcfb79d62f738a0a089ba41851a554.js",
+    "controllers": "/assets/controllers/index-2db729dddcc5b979110e98de4b6720f83f91a123172e87281d5a58410fc43806.js",
+    "controllers/modal_effect_controller": "/assets/controllers/modal_effect_controller-a6add68600a76f8d47f085e417031c4a491514e89cc2466e0a7585d78ab6775b.js"
+  }
+}</script>
+<link rel="modulepreload" href="../../assets/application-b3c52145e4177f0beadb48e288c36e2cbb603444b534715ebb66a4e490dff694.js">
+<link rel="modulepreload" href="../../assets/turbo.min-f309baafa3ae5ad6ccee3e7362118b87678d792db8e8ab466c4fa284dd3a4700.js">
+<link rel="modulepreload" href="../../assets/stimulus.min-d03cf1dff41d6c5698ec2c5d6a501615a7a33754dbeef8d1edd31c928d17c652.js">
+<link rel="modulepreload" href="../../assets/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js">
+<link rel="modulepreload" href="../../assets/bootstrap.min-67c48d88a8e0be178058aacb338b084191ed6d65c8fef751c50248202cf1488a.js">
+<link rel="modulepreload" href="../../assets/popper-15792033e209365e7b75c100dae2b69cba31b26b18b289383d22eb67639aad75.js">
+<script src="../../assets/es-module-shims.min-d89e73202ec09dede55fb74115af9c5f9f2bb965433de1c2446e1faa6dac2470.js" async="async" data-turbo-track="reload"></script>
+<script type="module">import "application"</script>
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="new.html#">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="nav-link large-link" href="../../rooms.html">
+      <i class="fa-solid fa-magnifying-glass"></i>
+</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../../rooms.html">Login</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+
+    <h2>Forgot your password?</h2>
+
+<form class="simple_form new_user" id="new_user" novalidate="novalidate" action="http://localhost:3000/users/password" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="tWcvUKJ4HKppFlI7Jn-VoDO-Il2_L5VII8i1m2wvE4lB5ruSuoOjEdnzos14sZfXSmxyFMoDEoMocGOPqn6pDQ" autocomplete="off" />
+  
+
+  <div class="form-inputs">
+    <div class="mb-3 email required user_email"><label class="form-label email required" for="user_email">Email <abbr title="required">*</abbr></label><input class="form-control string email required" autocomplete="email" autofocus="autofocus" required="required" aria-required="true" type="email" value="" name="user[email]" id="user_email" /></div>
+  </div>
+
+  <div class="form-actions">
+    <input type="submit" name="commit" value="Send me reset password instructions" class="btn" data-disable-with="Send me reset password instructions" />
+  </div>
+</form>
+  <a href="../../rooms.html">Log in</a><br />
+
+  <a href="../sign_up.html">Sign up</a><br />
+
+
+
+
+
+
+  </body>
+</html>
